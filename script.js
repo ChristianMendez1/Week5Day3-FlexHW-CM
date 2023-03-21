@@ -17,36 +17,49 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // Do all of your work inside the document.addEventListener  
 
   // Part 1
+  function part1(){
 document.getElementById('main-title').innerHTML = 'DOM CHRISTIAN HOMEPAGE';
+}
 
   // Part 2
+  function part2(){
 document.querySelector('body').style.backgroundColor = 'lightblue'
+ }
 
   // Part 3
+  function part3(){
 let removeLi = document.getElementById('favorite-things');
 removeLi.removeChild(removeLi.lastElementChild);
+ }
 
   // Part 4
+  function part4(){
 // let something = document.getElementsByClassName("special-title")
 // something.innerHTML = "abc"
-const fontSizeChange = document.querySelectorAll('.special-title');
+let fontSizeChange = document.querySelectorAll('.special-title');
 fontSizeChange.forEach((fontSizeChange) => {
   fontSizeChange.style.fontSize = '2rem';
 });
+ }
 
   // Part 5
+  function part5(){
   let removePR = document.getElementById('past-races');
 
   if (removePR.hasChildNodes()) {
     removePR.removeChild(removePR.children[3]);
   }
+ }
 
   // Part 6
+  function part6(){
   let newList = document.createElement("li");
   newList.innerHTML = "New York City";
   document.getElementById('past-races').appendChild(newList);
+ }
 
   // Part 7
+  function part7(){
   let newDiv = document.createElement("div");
   newDiv.classList.add('blog-post');
   newDiv.classList.add('purple');
@@ -61,13 +74,17 @@ fontSizeChange.forEach((fontSizeChange) => {
   let newP = document.createElement('p');
   newP.innerHTML = 'I DRAG RACED ACROSS THE BROOKLYN BRIDGE'
   newDiv.appendChild(newP);
+ }
 
   // Part 8
+  function part8(){
  let qotClick = document.getElementById("quote-title");
  qotClick.addEventListener('click',randomQuote);
+ }
 
   // Part 9
-  const blogPostAll = document.querySelectorAll('.blog-post');
+  function part9(){
+  let blogPostAll = document.querySelectorAll('.blog-post');
   blogPostAll.forEach((blogPostAll) => {
     blogPostAll.addEventListener('mouseout', mouseOut)
     blogPostAll.addEventListener('mouseenter', mouseEnter)
@@ -78,4 +95,17 @@ fontSizeChange.forEach((fontSizeChange) => {
       blogPostAll.classList.toggle('red');
     }
   });
+  }
+
+  part1()
+  part2()
+  part3()
+  part4()
+  part5()
+  part6()
+  part7()
+  part8()
+  part9()
+
 });
+ 
